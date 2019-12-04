@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Bos</title>
+    <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+    <!-- <script src="javaTest.js"></script> -->
+    <!-- <script src="aframe-rain.js"></script>
+    <script src="aframe-rain.min.js"></script> -->
+    <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
+  </head>
+  <body>
+
+    <!-- <style>
+    #box1 {
+      position: absolute; top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      transition: all 0.2s linear;
+      color: purple;
+    }
+    </style> -->
+    <a-scene id="wardrobeScene" stats>
+      <!-- IN METERS XYZ-->
+      <a-assets>
+        <a-asset-item id="wood_bench-obj" src="wood_bench.obj"></a-asset-item>
+        <a-asset-item id="wood_bench-mtl" src="wood_bench.mtl"></a-asset-item>
+        <a-asset-item id="ant-obj" src="ant.obj"></a-asset-item>
+      </a-assets>
+      <!-- <a-sphere id="bol" position="0 4 -5" radius="1" color="fff"></a-sphere> -->
+      <a-entity environment="preset: forest; numDressing: 5000"></a-entity>
+      <!-- <a-sky src="img/beach.jpg"></a-sky> -->
+      <a-entity id="tafel" position="-5.254 0 -4.907" scale="0.002 0.0015 0.002" obj-model="obj: #wood_bench-obj; mtl: #wood_bench-mtl"></a-entity>
+      <a-entity id="ant" position="-5.254 1.743 -4.907" scale="0.001 0.001 0.001" rotation="0 80 0" obj-model="obj: #ant-obj"></a-entity>
+
+      <!-- <a-box id="box1" position="-1 0 -3"></a-box>
+      <a-box id="box2" position="-1 0 -10" color="red"></a-box>
+
+      <a-box id="box3" position="5 0 -10" color="blue"></a-box>
+
+      <a-box id="box4" position="5 0 -3" color="yellow"></a-box> -->
+
+
+      <a-camera id="camera" position="0 0 0">
+        <a-cursor id="cursor">
+
+        </a-cursor>
+      </a-camera>
+
+    </a-scene>
+
+
+  </body>
+</html>
